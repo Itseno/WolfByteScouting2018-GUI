@@ -1,1 +1,37 @@
 Hello
+<ul id="navbar">
+  <li id="scoutName" onclick="displayUserEntryAmount();"><script>document.write(localStorage.getItem("currentScoutName"));</script></li>
+  <li id="title">Autonomous Period</li>
+  <li id="signOut" onclick="signOut();">Sign Out</li>
+</ul>
+<ul id="autoList">
+  <li class="autoListElement">Did the robot move at all during Auto?
+    <INPUT TYPE="radio" id="movesInAutoYes" name="movesInAuto" onclick="switchOnClick(this.id);"><strong>Yes</strong>
+    <INPUT TYPE="radio" id="movesInAutoNo" name="movesInAuto" onclick="switchOnClick(this.id);"><strong>No</strong></li>
+
+  <li class="autoListElement">Did the robot cross the AutoLine?
+    <INPUT TYPE="radio" id="crossesAutoLineYes" name="crossesAutoLine" onclick="switchOnClick(this.id);"><strong>Yes</strong>
+    <INPUT TYPE="radio" id="crossesAutoLineNo" name="crossesAutoLine" onclick="switchOnClick(this.id);"><strong>No</strong></li>
+
+  <li class="autoListElement">Did the robot place (a) cube(s) on the switch?
+    <INPUT TYPE="radio" id="placesOnSwitchAutoYes" name="placesOnSwitchAuto" onclick="switchOnClick(this.id);"><strong>Yes</strong>
+    <INPUT TYPE="radio" id="placesOnSwitchAutoNo" name="placesOnSwitchAuto" onclick="switchOnClick(this.id);"><strong>No</strong>
+    How Many?
+    <input type="text" id="placesOnSwitchAutoField" onchange="updateTextOnType(this.id);">
+    </li>
+
+  <li class="autoListElement">Did the robot place (a) cube(s) on the scale?
+    <INPUT TYPE="radio" id="placesOnScaleAutoYes" name="placesOnScaleAuto" onclick="switchOnClick(this.id);"><strong>Yes</strong>
+    <INPUT TYPE="radio" id="placesOnScaleAutoNo" name="placesOnScaleAuto" onclick="switchOnClick(this.id);"><strong>No</strong>
+    How Many?
+    <input type="text" id="placesOnScaleAutoField" onchange="updateTextOnType(this.id);">
+  </li>
+
+  <li class="autoListElement">Did the robot place (a) cube(s) in the exchange?
+    <INPUT TYPE="radio" id="placesInExchangeAutoYes" name="placesInExchangeAuto" onclick="switchOnClick(this.id);"><strong>Yes</strong>
+    <INPUT TYPE="radio" id="placesInExchangeAutoNo" name="placesInExchangeAuto" onclick="switchOnClick(this.id);"><strong>No</strong>
+    How Many?
+    <input type="text" id="placesInExchangeAutoField" onchange="updateTextOnType(this.id);">
+</ul>
+
+  <button type="button" id="nextButton" onclick="next();">Next</button>
