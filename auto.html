@@ -157,7 +157,11 @@ This is the html page for the Autonomous period.
         <INPUT TYPE="radio" id="placesCargoInRocketAutoNo"  name="placesCargoInRocketAuto" onclick="switchOnClick(this.id);"><strong>No</strong>
         How Many?
           <input type="text" id="placesCargoInRocketAutoField" onchange="updateTextOnType(this.id);">
-    </ul>
+
+      <li class="autoListElement">Does driver navigate robot via camera or auto?
+        <INPUT TYPE="radio" id="drivesViaCameraAuto" name="drivesInAuto" onclick="switchOnClick(this.id);"><strong>Camera</strong>
+        <INPUT TYPE="radio" id="drivesAutoAuto"      name="drivesInAuto" onclick="switchOnClick(this.id);"><strong>Auto</strong>
+      </ul>
 
       <button type="button" id="nextButton" onclick="next();">Next</button>
 
