@@ -59,6 +59,24 @@ This is the html page for Teleop during the match.
       else if(clickedID == "climbsToThirdLevelDidn'tTry") {
         localStorage.setItem("climbsToThirdLevelValue", 2);
       }
+      else if(clickedID == "assistsAlliesClimbSecondLevelYes") {
+        localStorage.setItem("assistsAlliesClimbSecondLevelValue", 1);
+      }
+      else if(clickedID == "assistsAlliesClimbSecondLevelNo") {
+        localStorage.setItem("assistsAlliesClimbSecondLevelValue", 0);
+      }
+      else if(clickedID == "assistsAlliesClimbSecondLevelDidn'tTry") {
+        localStorage.setItem("assistsAlliesClimbSecondLevelValue", 2);
+      }
+      else if(clickedID == "assistsAlliesClimbThirdLevelYes") {
+        localStorage.setItem("assistsAlliesClimbThirdLevelValue", 1);
+      }
+      else if(clickedID == "assistsAlliesClimbThirdLevelNo") {
+        localStorage.setItem("assistsAlliesClimbSecondLevelValue", 0);
+      }
+      else if(clickedID == "assistsAlliesClimbThirdLevelDidn'tTry") {
+        localStorage.setItem("assistsAlliesClimbThirdLevelValue", 2);
+      }
     }
 
     function updateTextOnType(typedID) {
@@ -146,6 +164,14 @@ This is the html page for Teleop during the match.
         <INPUT TYPE="radio" id="climbsToThirdLevelYes" name="climbsToThirdLevel" onclick="switchOnClick(this.id);"><strong>Yes</strong>
         <INPUT TYPE="radio" id="climbsToThirdLevelNo" name="climbsToThirdLevel" onclick="switchOnClick(this.id);"><strong>No</strong>
         <INPUT TYPE="radio" id="climbsToThirdLevelDidn'tTry" name="climbsToThirdLevel" onclick="switchOnClick(this.id);"><strong>Didn't Try</strong>
+      <li class="postMatchListElement">Can the robot assist allies to climb to the second level?
+        <INPUT TYPE="radio" id="assistsAlliesClimbSecondLevelYes" name="assistsAlliesClimbSecondLevel" onclick="switchOnClick(this.id);"><strong>Yes</strong>
+        <INPUT TYPE="radio" id="assistsAlliesClimbSecondLevelNo" name="assistsAlliesClimbSecondLevel" onclick="switchOnClick(this.id);"><strong>No</strong>
+        <INPUT TYPE="radio" id="assistsAlliesClimbSecondLevelDidn'tTry" name="assistsAlliesClimbSecondLevel" onclick="switchOnClick(this.id);"><strong>Didn't Try</strong>
+      <li class="postMatchListElement">Can the robot assist allies to climb to the third level?
+        <INPUT TYPE="radio" id="assistsAlliesClimbThirdLevelYes" name="assistsAlliesClimbThirdLevel" onclick="switchOnClick(this.id);"><strong>Yes</strong>
+        <INPUT TYPE="radio" id="assistsAlliesClimbThirdLevelNo" name="assistsAlliesClimbThirdLevel" onclick="switchOnClick(this.id);"><strong>No</strong>
+        <INPUT TYPE="radio" id="assistsAlliesClimbThirdLevelDidn'tTry" name="assistsAlliesClimbThirdLevel" onclick="switchOnClick(this.id);"><strong>Didn't Try</strong>
     </ul>
     <p id="commentsHeader">Please write some comments about the robot. Comments must be ten (test) characters.</p>
     <input type="text" name="comments" id="commentsField" onchange="updateTextOnType(this.id);">
