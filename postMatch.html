@@ -41,23 +41,23 @@ This is the html page for Teleop during the match.
     }
 
     function switchOnClick(clickedID) {
-      if(clickedID == "feedsFromPortalYes") {
-        localStorage.setItem("feedsFromPortalValue", 1);
+      if(clickedID == "climbsToSecondLevelYes") {
+        localStorage.setItem("climbsToSecondLevelValue", 1);
       }
-      else if(clickedID == "feedsFromPortalNo") {
-        localStorage.setItem("feedsFromPortalValue", 0);
+      else if(clickedID == "climbsToSecondLevelNo") {
+        localStorage.setItem("climbsToSecondLevelValue", 0);
       }
-      else if(clickedID == "feedsFromGroundYes") {
-        localStorage.setItem("feedsFromGroundValue", 1);
+      else if(clickedId == "climbsToSecondLevelDidn'tTry") {
+        localStorage.setItem("climbsToSecondLevelValue", 2);
       }
-      else if(clickedID == "feedsFromGroundNo") {
-        localStorage.setItem("feedsFromGroundValue", 0);
+      else if(clickedID == "climbsToThirdLevelYes") {
+        localStorage.setItem("climbsToThirdLevelValue", 1);
       }
-      else if(clickedID == "feedsFromExchangeYes") {
-        localStorage.setItem("feedsFromExchangeValue", 1);
+      else if(clickedID == "climbsToThirdLevelNo") {
+        localStorage.setItem("climbsToThirdLevelValue", 0);
       }
-      else if(clickedID == "feedsFromExchangeNo") {
-        localStorage.setItem("feedsFromExchangeValue", 0);
+      else if(clickedID == "climbsToThirdLevelDidn'tTry") {
+        localStorage.setItem("climbsToThirdLevelValue", 2);
       }
     }
 
@@ -138,15 +138,14 @@ This is the html page for Teleop during the match.
       <li id="signOut" onclick="signOut();">Sign Out</li>
     </ul>
     <ul id="postMatchList">
-      <li class="postMatchListElement">Can the robot receive cubes from the portal?
-        <INPUT TYPE="radio" id="feedsFromPortalYes" name="feedsFromPortal" onclick="switchOnClick(this.id);"><strong>Yes</strong>
-        <INPUT TYPE="radio" id="feedsFromPortalNo" name="feedsFromPortal" onclick="switchOnClick(this.id);"><strong>No</strong></li>
-      <li class="postMatchListElement">Can the robot pick up cubes from the ground?
-        <INPUT TYPE="radio" id="feedsFromGroundYes" name="feedsFromGround" onclick="switchOnClick(this.id);"><strong>Yes</strong>
-        <INPUT TYPE="radio" id="feedsFromGroundNo" name="feedsFromGround" onclick="switchOnClick(this.id);"><strong>No</strong></li>
-      <li class="postMatchListElement">Can the robot receive cubes from the exchange?
-        <INPUT TYPE="radio" id="feedsFromExchangeYes" name="feedsFromExchange" onclick="switchOnClick(this.id);"><strong>Yes</strong>
-        <INPUT TYPE="radio" id="feedsFromExchangeNo" name="feedsFromExchange" onclick="switchOnClick(this.id);"><strong>No</strong></li>
+      <li class="postMatchListElement">Can the robot climb to the second level?
+        <INPUT TYPE="radio" id="climbsToSecondLevelYes" name="climbsToSecondLevel" onclick="switchONClick(this.id);"><strong>Yes</strong>
+        <INPUT TYPE="radio" id="climbsToSecondLevelNo"  name="climbsToSecondLevel" onclick="switchOnClick(this.id);"><strong>No</strong>
+        <INPUT TYPE="radio" id="climbsToSecondLevelDidn'tTry" name="climbsToSecondLevel" onclick="switchOnClick(this.id);"><strong>Didn't Try</strong>
+      <li class="postMatchListElement">Can the robot climb to the third level?
+        <INPUT TYPE="radio" id="climbsToThirdLevelYes" name="climbsToThirdLevel" onclick="switchOnClick(this.id);"><strong>Yes</strong>
+        <INPUT TYPE="radio" id="climbsToThirdLevelNo" name="climbsToThirdLevel" onclick="switchOnClick(this.id);"><strong>No</strong>
+        <INPUT TYPE="radio" id="climbsToThirdLevelDidn'tTry" name="climbsToThirdLevel" onclick="switchOnClick(this.id);"><strong>Didn't Try</strong>
     </ul>
     <p id="commentsHeader">Please write some comments about the robot. Comments must be ten (test) characters.</p>
     <input type="text" name="comments" id="commentsField" onchange="updateTextOnType(this.id);">
