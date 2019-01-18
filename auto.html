@@ -44,6 +44,7 @@ This is the html page for the Autonomous period.
         }
       }
     }
+    // I don't know if we will need this function next().
     function next() {
       if(localStorage.getItem("placesOnSwitchAutoValue") == 1 && localStorage.getItem("placesOnSwitchAmountValue") == "" || isNaN(localStorage.getItem("placesOnSwitchAmountValue"))) {
         document.getElementById("title").innerHTML = "Please ensure text fields are filled (w/ numbers)";
@@ -139,7 +140,8 @@ This is the html page for the Autonomous period.
       <li class="autoListElement">Does the robot move in autonomous?
         <INPUT TYPE="radio" id="movesInAutoYes" name="movesInAuto" onclick="switchOnClick(this.id);"><strong>1st</strong>
         <INPUT TYPE="radio" id="movesInAutoNo" name="movesInAuto" onclick="switchOnClick(this.id);"><strong>2nd</strong></li>
-      <li class="autoListElement">Does robot start on 1st or 2nd level?
+          
+      <li class="autoListElement">Did the robot start on 1st or 2nd level?
         <INPUT TYPE="radio" id="startOn1st" name="startsInAuto" onclick="switchOnClick(this.id);"><strong>1st</strong>
         <INPUT TYPE="radio" id="startsOn2nd" name="startsInAuto" onclick="switchOnClick(this.id);"><strong>2nd</strong></li>
 
@@ -151,27 +153,27 @@ This is the html page for the Autonomous period.
         </li>
 
       <li class="autoListElement">Did the robot place cargo in cargo ship?
-        <INPUT TYPE="radio" id="placesCargoInCargoShipYes" name="placesInCargoShipAuto" onclick="switchOnClick(this.id);"><strong>Yes</strong>
-        <INPUT TYPE="radio" id="placesCargoInCargoShipNo"  name="placesInCargoShipAuto" onclick="switchOnClick(this.id);"><strong>No</strong>
+        <INPUT TYPE="radio" id="placesCargoInCargoShipAutoYes" name="placesCargoInCargoShipAuto" onclick="switchOnClick(this.id);"><strong>Yes</strong>
+        <INPUT TYPE="radio" id="placesCargoInCargoShipAutoNo"  name="placesCargoInCargoShipAuto" onclick="switchOnClick(this.id);"><strong>No</strong>
         How Many?
         <input type="text" id="placesInCargoShipAutoField" onchange="updateTextOnType(this.id);">
         </li>
 
       <li class="autoListElement">Does the robot place hatch on any part of the rocket?
-        <INPUT TYPE="radio" id="placesHatchOnRocketAutoYes" name="placesHatchOnRocketAuto" onclick="switchOnClick(this.id);"><strong>Yes</strong>
-        <INPUT TYPE="radio" id="placesHatchOnRocketAutoNo"  name="placesHatchOnRocketAuto" onclick="switchOnClick(this.id);"><strong>No</strong>
+        <INPUT TYPE="radio" id="placeHatchOnRocketAutoYes" name="placeHatchOnRocketAuto" onclick="switchOnClick(this.id);"><strong>Yes</strong>
+        <INPUT TYPE="radio" id="placeHatchOnRocketAutoNo"  name="placeHatchOnRocketAuto" onclick="switchOnClick(this.id);"><strong>No</strong>
         How Many?
         <input type="text" id="placesHatchonRocketAutoField" onchange="updateTextOnType(this.id);">
       </li>
 
       <li class="autoListElement">Does the robot place cargo in any part of the rocket?
-        <INPUT TYPE="radio" id="placesCargoInRocketAutoYes" name="placesCargoInRocketAuto" onclick="switchOnClick(this.id);"><strong>Yes</strong>
-        <INPUT TYPE="radio" id="placesCargoInRocketAutoNo"  name="placesCargoInRocketAuto" onclick="switchOnClick(this.id);"><strong>No</strong>
+        <INPUT TYPE="radio" id="placeCargoInRocketAutoYes" name="placeCargoInRocketAuto" onclick="switchOnClick(this.id);"><strong>Yes</strong>
+        <INPUT TYPE="radio" id="placeCargoInRocketAutoNo"  name="placeCargoInRocketAuto" onclick="switchOnClick(this.id);"><strong>No</strong>
         How Many?
         <input type="text" id="placesInExchangeAutoField" onchange="updateTextOnType(this.id);">
 
       <li class="autoListElement">Does driver navigate robot via camera or auto?
-        <INPUT TYPE="radio" id="drivesViaCameraAuto" name="drivesInAuto" onclick="switchOnClick(this.id);"><strong>Camera</strong>
+        <INPUT TYPE="radio" id="drivesCameraAuto" name="drivesInAuto" onclick="switchOnClick(this.id);"><strong>Camera</strong>
         <INPUT TYPE="radio" id="drivesAutoAuto" name="drivesInAuto" onclick="switchOnClick(this.id);"><strong>Auto</strong>
         </li>
       </ul>
