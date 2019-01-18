@@ -113,7 +113,7 @@ This is the html page for Teleop during the match.
           localStorage.setItem("supportedOtherRobotNotClimbedValue", 0);
         }
       }
-
+// This function next() will probably need to be taken out.
       function next() {
         if(localStorage.getItem("movesInTeleopValue") == -1 || localStorage.getItem("getsOnPlatformValue") == -1 || localStorage.getItem("climbedBarValue") == -1 || localStorage.getItem("climbedOtherRobotValue") == -1 || localStorage.getItem("supportedOtherRobotWhileClimbedValue") == -1 || localStorage.getItem("supportedOtherRobotNotClimbedValue") == -1) {
           document.getElementById("title").innerHTML = "Please ensure all questions are answered.";
@@ -163,7 +163,8 @@ This is the html page for Teleop during the match.
         <INPUT TYPE="radio" id="placesHatchOnRocketNo" name="placesHatchOnRocket" onclick="switchOnClick(this.id);"><strong>No</strong></li>
       <li class="teleopListElement">Did the robot place cargo in the rocket?
         <INPUT TYPE="radio" id="placesCargoInRocketYes" name="placesCargoInRocket" onclick="switchOnClick(this.id);"><strong>Yes</strong>
-        <INPUT TYPE="radio" id="placesCargoInRocketNo" name="placesCargoInRocket" onclick="switchOnClick(this.id);"><strong>No</strong></li>
+        <INPUT TYPE="radio" id="placesCargoInRocketNo" name="placesCargoInRocket" onclick="switchOnClick(this.id);"><strong>No</strong>
+      </li>
     </ul>
     <button type="button" id="nextButton" onclick="next();">Next</button>
   </body>
