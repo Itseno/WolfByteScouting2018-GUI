@@ -131,14 +131,14 @@ This is the html page for the Autonomous period.
         <INPUT TYPE="radio" id="startOn1st" name="startsInAuto" onclick="switchOnClick(this.id);"><strong>1st</strong>
         <INPUT TYPE="radio" id="startsOn2nd" name="startsInAuto" onclick="switchOnClick(this.id);"><strong>2nd</strong></li>
 
-      <li class="autoListElement">Does the robot place hatch on cargo ship?
+      <li class="autoListElement">Did the robot place hatch on cargo ship?
         <INPUT TYPE="radio" id="placesHatchOnCargoShipYes" name="placesHatchOnCargoShip" onclick="switchOnClick(this.id);"><strong>Yes</strong>
-        <INPUT TYPE="radio" id="placesHatchOnCargoShipNo" name="placesHatchOnCargoShip" onclick="switchOnClick(this.id);"><strong>No</strong></li>
+        <INPUT TYPE="radio" id="placesHatchOnCargoShipNo" name="placesHatchOnCargoShip" onclick="switchOnClick(this.id);"><strong>No</strong>
         How Many?
           <input type="text" id="placesHatchOnCargoShipAutoField" onchange="updateTextOnType(this.id);">
         </li>
 
-      <li class="autoListElement">Does the robot place cargo in cargo ship?
+      <li class="autoListElement">Did the robot place cargo in cargo ship?
         <INPUT TYPE="radio" id="placesCargoInCargoShipYes" name="placesInCargoShipAuto" onclick="switchOnClick(this.id);"><strong>Yes</strong>
         <INPUT TYPE="radio" id="placesCargoInCargoShipNo"  name="placesInCargoShipAuto" onclick="switchOnClick(this.id);"><strong>No</strong>
         How Many?
@@ -146,7 +146,7 @@ This is the html page for the Autonomous period.
         </li>
 
       <li class="autoListElement">Does the robot place hatch on any part of the rocket?
-        <INPUT TYPE="radio" id="placesHatchOnRocketAutoYes" name="placesHatchOnRocketAuto" onclick="switchOnClick(this.id);"><strong>Yes</stron>
+        <INPUT TYPE="radio" id="placesHatchOnRocketAutoYes" name="placesHatchOnRocketAuto" onclick="switchOnClick(this.id);"><strong>Yes</strong>
         <INPUT TYPE="radio" id="placesHatchOnRocketAutoNo"  name="placesHatchOnRocketAuto" onclick="switchOnClick(this.id);"><strong>No</strong>
         How Many?
         <input type="text" id="placesHatchonRocketAutoField" onchange="updateTextOnType(this.id);">
@@ -160,7 +160,8 @@ This is the html page for the Autonomous period.
 
       <li class="autoListElement">Does driver navigate robot via camera or auto?
         <INPUT TYPE="radio" id="drivesViaCameraAuto" name="drivesInAuto" onclick="switchOnClick(this.id);"><strong>Camera</strong>
-        <INPUT TYPE="radio" id="drivesAutoAuto"      name="drivesInAuto" onclick="switchOnClick(this.id);"><strong>Auto</strong>
+        <INPUT TYPE="radio" id="drivesAutoAuto" name="drivesInAuto" onclick="switchOnClick(this.id);"><strong>Auto</strong>
+        </li>
       </ul>
 
       <button type="button" id="nextButton" onclick="next();">Next</button>
