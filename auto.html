@@ -13,7 +13,7 @@ This is the html page for the Autonomous period.
     <script>
     function initialization() {
       localStorage.setItem("movesInAutoValue", -1);
-      localStorage.setItem("crosses(the)AutoLineValue", -1);
+      localStorage.setItem("crossesAutoLineValue", -1);
       localStorage.setItem("placesOnSwitchAutoValue", -1);
       localStorage.setItem("placesOnSwitchAmountValue", "");
       localStorage.setItem("placesOnScaleAutoValue", -1);
@@ -80,8 +80,14 @@ This is the html page for the Autonomous period.
       if(clickedID=="startson1st") {
         localStorage.setItem("startson1stValue", 1);
       }
-      else if(clickedID== "startson2nd") {
-        localStorage.setItem("startson2ndValue", 0);
+      else if (clickedID == "placesInCargoAutoNo"){
+        localStorage.setItem("placesInCargoAutoValue", 0)
+      }
+      else if (clickedID == "placesInCargoAutoYes"){
+        localStorage.setItem("placesInCargoAutoValue", 1)
+      }
+      else if(clickedID == "movesInAutoNo") {
+        localStorage.setItem("movesInAutoValue", 0);
       }
       else if(clickedID == "placesHatchOnCargoShipAutoYes") {
         localStorage.setItem("placesHatchOnCargoShipValue", 1);
@@ -111,6 +117,9 @@ This is the html page for the Autonomous period.
     function updateTextOnType(typedID) {
       if(typedID == "placesOnSwitchAutoField") {
         localStorage.setItem("placesOnSwitchAmountValue", document.getElementById("placesOnSwitchAutoField").value);
+      }
+      else if (typedID == "placesInCargoAutoField"){
+        localStorage.setItem("placesInCargoAutoValue", document.getElementById("placesInCargoAutoField").value);
       }
       else if(typedID == "placesOnScaleAutoField") {
         localStorage.setItem("placesOnScaleAmountValue", document.getElementById("placesOnScaleAutoField").value);
@@ -156,13 +165,14 @@ This is the html page for the Autonomous period.
         <INPUT TYPE="radio" id="placesCargoInRocketAutoYes" name="placesCargoInRocketAuto" onclick="switchOnClick(this.id);"><strong>Yes</strong>
         <INPUT TYPE="radio" id="placesCargoInRocketAutoNo"  name="placesCargoInRocketAuto" onclick="switchOnClick(this.id);"><strong>No</strong>
         How Many?
-          <input type="text" id="placesCargoInRocketAutoField" onchange="updateTextOnType(this.id);">
+        <input type="text" id="placesInExchangeAutoField" onchange="updateTextOnType(this.id);">
 
       <li class="autoListElement">Does driver navigate robot via camera or auto?
         <INPUT TYPE="radio" id="drivesViaCameraAuto" name="drivesInAuto" onclick="switchOnClick(this.id);"><strong>Camera</strong>
         <INPUT TYPE="radio" id="drivesAutoAuto" name="drivesInAuto" onclick="switchOnClick(this.id);"><strong>Auto</strong>
         </li>
       </ul>
+    </ul>
 
       <button type="button" id="nextButton" onclick="next();">Next</button>
 
