@@ -172,6 +172,12 @@ This is the html page for Teleop during the match.
         <INPUT TYPE="radio" id="assistsAlliesClimbThirdLevelYes" name="assistsAlliesClimbThirdLevel" onclick="switchOnClick(this.id);"><strong>Yes</strong>
         <INPUT TYPE="radio" id="assistsAlliesClimbThirdLevelNo" name="assistsAlliesClimbThirdLevel" onclick="switchOnClick(this.id);"><strong>No</strong>
         <INPUT TYPE="radio" id="assistsAlliesClimbThirdLevelDidn'tTry" name="assistsAlliesClimbThirdLevel" onclick="switchOnClick(this.id);"><strong>Didn't Try</strong>
+      <li class="postMatchListElement">Can the robot pick up hatches from the ground?
+        <INPUT TYPE="radio" id="pickUpHatchesFromGroundYes" name="pickUpHatchesFromGround" onclick="switchOnClick(this.id);"><strong>Yes</strong>
+        <INPUT TYPE="radio" id="pickUpHatchesFromGroundNo" name="pickUpHatchesFromGround" onclick="switchOnClick(this.id);"><strong>No</strong>
+      <li class="postMatchListElement">Can the robot pick up cargo from the ground?
+        <INPUT TYPE="radio" id="pickUpCargoFromGroundYes" name="pickUpCargoFromGround" onclick="switchOnClick(this.id);"><strong>Yes</strong>
+        <INPUT TYPE="radio" id="pickUpCargoFromGroundNo" name="pickUpCargoFromGround" onclick="switchOnClick(this.id);"><strong>No</strong>
     </ul>
     <p id="commentsHeader">Please write some comments about the robot. Comments must be ten (test) characters.</p>
     <input type="text" name="comments" id="commentsField" onchange="updateTextOnType(this.id);">
