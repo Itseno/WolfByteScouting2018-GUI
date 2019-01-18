@@ -135,32 +135,38 @@ This is the html page for Teleop during the match.
         <INPUT TYPE="radio" id="movesInTeleopYes" name="movesInTeleop" onclick="switchOnClick(this.id);"><strong>Yes</strong>
         <INPUT TYPE="radio" id="movesInTeleopNo" name="movesInTeleop" onclick="switchOnClick(this.id);"><strong>No</strong></li>
       <li class="teleopListElement">How many cubes did the robot place on the switch during Teleop?
+        <!--this needs to be fixed-->
         <button type="button" id="switchTeleopMinus" onclick="switchOnClick(this.id);">-</button>
         <p style="display: inline;" id="switchTeleopCounter">0</p>
         <button type="button" id="switchTeleopPlus" onclick="switchOnClick(this.id);">+</button>
       </li>
       <li class="teleopListElement">How many cubes did the robot place on the scale during Teleop?
+        <!--this needs to be fixed-->
         <button type="button" id="scaleTeleopMinus" onclick="switchOnClick(this.id);">-</button>
         <p style="display: inline;" id="scaleTeleopCounter">0</p>
         <button type="button" id="scaleTeleopPlus" onclick="switchOnClick(this.id);">+</button>
       </li>
       <li class="teleopListElement">How many cubes (test) did the robot place in the exchange during Teleop?
+        <!--this needs to be fixed-->
         <button type="button" id="exchangeTeleopMinus" onclick="switchOnClick(this.id);">-</button>
         <p style="display: inline;" id="exchangeTeleopCounter">0</p>
         <button type="button" id="exchangeTeleopPlus" onclick="switchOnClick(this.id);">+</button>
       </li>
-      <li class="teleopListElement">Did the robot get on top of the platform?
-        <INPUT TYPE="radio" id="getsOnPlatformYes" name="getsOnPlatform" onclick="switchOnClick(this.id);"><strong>Yes</strong>
-        <INPUT TYPE="radio" id="getsOnPlatformNo" name="getsOnPlatform" onclick="switchOnClick(this.id);"><strong>No</strong></li>
-      <li class="teleopListElement">Did the robot successfully climb the bar?
-        <INPUT TYPE="radio" id="climbedBarYes" name="climbedBar" onclick="switchOnClick(this.id);"><strong>Yes</strong>
-        <INPUT TYPE="radio" id="climbedBarNo" name="climbedBar" onclick="switchOnClick(this.id);"><strong>No</strong></li>
+      <li class="teleopListElement">Did the robot place hatches on cargo ship?
+        <INPUT TYPE="radio" id="placesHatchOnCargoShipYes" name="placesHatchOnCargoShip" onclick="switchOnClick(this.id);"><strong>Yes</strong>
+        <INPUT TYPE="radio" id="placesHatchOnCargoShipNo" name="placesHatchOnCargoShip" onclick="switchOnClick(this.id);"><strong>No</strong></li>
+      <li class="teleopListElement">Did the robot place cargo in cargo ship?
+        <INPUT TYPE="radio" id="placesCargoInCargoShipYes" name="placesCargoInCargoShip" onclick="switchOnClick(this.id);"><strong>Yes</strong>
+        <INPUT TYPE="radio" id="placesCargoInCargoShipNo" name="placesCargoInCargoShip" onclick="switchOnClick(this.id);"><strong>No</strong></li>
+      <li class="teleopListElement">Did the robot place hatches on the rocket?
+        <INPUT TYPE="radio" id="placesHatchOnRocketYes" name="placesHatchOnRocket" onclick="switchOnClick(this.id);"><strong>Yes</strong>
+        <INPUT TYPE="radio" id="placesHatchOnRocketNo" name="placesHatchOnRocket" onclick="switchOnClick(this.id);"><strong>No</strong></li>
+      <li class="teleopListElement">Did the robot place cargo in the rocket?
+        <INPUT TYPE="radio" id="placesCargoInRocketYes" name="placesCargoInRocket" onclick="switchOnClick(this.id);"><strong>Yes</strong>
+        <INPUT TYPE="radio" id="placesCargoInRocketNo" name="placesCargoInRocket" onclick="switchOnClick(this.id);"><strong>No</strong></li>
       <li class="teleopListElement">Did the robot successfully climb on top of another robot?
         <INPUT TYPE="radio" id="climbedOtherRobotYes" name="climbedOtherRobot" onclick="switchOnClick(this.id);"><strong>Yes</strong>
         <INPUT TYPE="radio" id="climbedOtherRobotNo" name="climbedOtherRobot" onclick="switchOnClick(this.id);"><strong>No</strong></li>
-      <li class="teleopListElement">Did another robot successfully climb the robot while it was hanging?
-        <INPUT TYPE="radio" id="supportedOtherRobotWhileClimbedYes" name="supportedOtherRobotWhileClimbed" onclick="switchOnClick(this.id);"><strong>Yes</strong>
-        <INPUT TYPE="radio" id="supportedOtherRobotWhileClimbedNo" name="supportedOtherRobotWhileClimbed" onclick="switchOnClick(this.id);"><strong>No</strong></li>
       <li class="teleopListElement">Did another robot successfully climb on top of the robot?
         <INPUT TYPE="radio" id="supportedOtherRobotNotClimbedYes" name="supportedOtherRobotNotClimbed" onclick="switchOnClick(this.id);"><strong>Yes</strong>
         <INPUT TYPE="radio" id="supportedOtherRobotNotClimbedNo" name="supportedOtherRobotNotClimbed" onclick="switchOnClick(this.id);"><strong>No</strong></li>
