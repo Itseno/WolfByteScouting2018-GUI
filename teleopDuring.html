@@ -152,6 +152,14 @@ This is the html page for Teleop during the match.
         <p style="display: inline;" id="exchangeTeleopCounter">0</p>
         <button type="button" id="exchangeTeleopPlus" onclick="switchOnClick(this.id);">+</button>
       </li>
+
+      <li class="teleopListElement">How much cargo did the robot place in the rocket during Teleop?
+        <!--this needs to be fixed-->
+        <button type="button" id="exchangeTeleopMinus" onclick="switchOnClick(this.id);">-</button>
+        <p style="display: inline;" id="exchangeTeleopCounter">0</p>
+        <button type="button" id="exchangeTeleopPlus" onclick="switchOnClick(this.id);">+</button>
+      </li>
+
       <li class="teleopListElement">Did the robot place hatches on cargo ship?
         <INPUT TYPE="radio" id="placesHatchOnCargoShipYes" name="placesHatchOnCargoShip" onclick="switchOnClick(this.id);"><strong>Yes</strong>
         <INPUT TYPE="radio" id="placesHatchOnCargoShipNo" name="placesHatchOnCargoShip" onclick="switchOnClick(this.id);"><strong>No</strong></li>
