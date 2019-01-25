@@ -131,15 +131,6 @@ This is the html page for Teleop during the match.
       <li id="signOut" onclick="signOut();">Sign Out</li>
     </ul>
     <ul id="teleopList">
-      <li class="teleopListElement">Does the robot cross the hab line?
-        <INPUT TYPE="radio" id="crossesHabLineYes" name="crossesHabLine" onclick="switchOnClick(this.id);"><strong>Yes</strong>
-        <INPUT TYPE="radio" id="crossesHabLineNo" name="crossesHabLine" onclick="switchOnClick(this.id);"><strong>No</strong>
-      <li class="teleopListElement">How many hatches did the robot place on the cargo ship during Teleop?
-        <!--this needs to be fixed-->
-        <button type="button" id="switchTeleopMinus" onclick="switchOnClick(this.id);">-</button>
-        <p style="display: inline;" id="switchTeleopCounter">0</p>
-        <button type="button" id="switchTeleopPlus" onclick="switchOnClick(this.id);">+</button>
-      </li>
       <li class="teleopListElement">How much cargo did the robot place in the cargo ship during Teleop?
         <!--this needs to be fixed-->
         <button type="button" id="scaleTeleopMinus" onclick="switchOnClick(this.id);">-</button>
