@@ -152,7 +152,7 @@ This is the html page for Teleop during the match.
     </script>
     <ul id="navbar">
       <li id="scoutName" onclick="displayUserEntryAmount();"><script>document.write(localStorage.getItem("currentScoutName"));</script></li>
-      <li id="title">ENDGAME</li>
+      <li id="title">Endgame</li>
       <li id="signOut" onclick="signOut();">Sign Out</li>
     </ul>
     <ul id="postMatchList">
@@ -176,13 +176,13 @@ This is the html page for Teleop during the match.
         <INPUT TYPE="radio" id="assistsAlliesClimbThirdLevelYes" name="assistsAlliesClimbThirdLevel" onclick="switchOnClick(this.id);"><strong>Yes</strong>
         <INPUT TYPE="radio" id="assistsAlliesClimbThirdLevelNo" name="assistsAlliesClimbThirdLevel" onclick="switchOnClick(this.id);"><strong>No</strong>
 
-      <li class="postMatchListElement">Did the robot pick up hatches from the ground?
+      <li class="postMatchListElement">Can the robot pick up hatches from the ground?
         <INPUT TYPE="radio" id="pickUpHatchesFromGroundYes" name="pickUpHatchesFromGround" onclick="switchOnClick(this.id);"><strong>Yes</strong>
         <INPUT TYPE="radio" id="pickUpHatchesFromGroundNo" name="pickUpHatchesFromGround" onclick="switchOnClick(this.id);"><strong>No</strong>
-      <li class="postMatchListElement">Did the robot pick up cargo from the ground?
+      <li class="postMatchListElement">Can the robot pick up cargo from the ground?
         <INPUT TYPE="radio" id="pickUpCargoFromGroundYes" name="pickUpCargoFromGround" onclick="switchOnClick(this.id);"><strong>Yes</strong>
         <INPUT TYPE="radio" id="pickUpCargoFromGroundNo" name="pickUpCargoFromGround" onclick="switchOnClick(this.id);"><strong>No</strong>
-    
+
     </ul>
     <p id="commentsHeader">Please write some comments about the robot. Comments must be ten characters.</p>
     <input type="text" name="comments" id="commentsField" onchange="updateTextOnType(this.id);">
