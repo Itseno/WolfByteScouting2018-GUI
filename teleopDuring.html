@@ -16,7 +16,7 @@ This is the html page for Teleop during the match.
         localStorage.setItem("cargoCargoshipTeleopValue", 0);
         localStorage.setItem("hatchRocketTeleopValue", 0);
         localStorage.setItem("cargoRocketTeleopValue", 0);
-        localStorage.setItem("defense", -1);
+        localStorage.setItem("defenseValue", -1);
       }
       function signOut() {
         localStorage.setItem("currentScoutName", "");
@@ -58,12 +58,18 @@ This is the html page for Teleop during the match.
             localStorage.setItem("cargoCargoshipTeleopValue", parseInt(localStorage.getItem("cargoCargoshipTeleopValue")) - 1);
             document.getElementById("cargoCargoshipTeleopCounter").innerHTML = localStorage.getItem("cargoCargoshipTeleopValue");
           }
+        }
         else if(clickedID == "moveInTeleopYes") {
           localStorage.setItem("moveInTeleopValue", 1);
         }
         else if(clickedID == "moveInTeleopNo") {
           localStorage.setItem("moveInTeleopValue", 0);
         }
+        else if(clickedID == "defenseYes"){
+          localStorage.setItem("defenseValue", 1)
+        }
+        else if(clickedID == "defenseNo"){
+          localStorage.setItem("defenseValue", 0)
         }
         else if(clickedID == "cargoCargoshipTeleopPlus") {
           localStorage.setItem("cargoCargoshipTeleopValue", parseInt(localStorage.getItem("cargoCargoshipTeleopValue")) + 1);
@@ -118,7 +124,7 @@ This is the html page for Teleop during the match.
       </li>
       <li class="teleopListElement">How much cargo did the robot place in the cargo ship during Teleop?
         <!--this needs to be fixed-->
-        <button type="button" id="cargocCargoshipTeleopMinus" onclick="switchOnClick(this.id);">-</button>
+        <button type="button" id="cargoCargoshipTeleopMinus" onclick="switchOnClick(this.id);">-</button>
         <p style="display: inline;" id="CargocargoshipTeleopCounter">0</p>
         <button type="button" id="cargoCargoshipTeleopPlus" onclick="switchOnClick(this.id);">+</button>
       </li>
