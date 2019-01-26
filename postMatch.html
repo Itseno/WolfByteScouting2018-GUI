@@ -11,9 +11,13 @@ This is the html page for Teleop during the match.
   <body>
     <script>
     function initialization() {
-      localStorage.setItem("feedsFromPortalValue", -1);
-      localStorage.setItem("feedsFromGroundValue", -1);
-      localStorage.setItem("feedsFromExchangeValue", -1);
+      localStorage.setItem("climbsToFirstLevelValue", -1);
+      localStorage.setItem("climbsToSecondLevelValue", -1);
+      localStorage.setItem("climbsToThirdLevelValue", -1);
+      localStorage.setItem("assistsAlliesClimbSecondLevelValue", -1);
+      localStorage.setItem("assistsAlliesClimbThirdLevelValue", -1);
+      localStorage.setItem("pickUpHatchesFromGroundValue", -1);
+      localStorage.setItem("pickUpCargoFromGround", -1);
       localStorage.setItem("commentsValue", "");
     }
     function signOut() {
@@ -41,14 +45,17 @@ This is the html page for Teleop during the match.
     }
 
     function switchOnClick(clickedID) {
-      if(clickedID == "climbsToSecondLevelYes") {
+      if(clickedID == "climbsToFirstLevelYes") {
+        localStorage.setItem("climbsToFirstLevelValue", 1);
+      }
+      else if(clickedID == "climbsToFirstLevelNo") {
+        localStorage.setItem("climbsToFLevelValue", 0);
+      }
+      else if(clickedID == "climbsToSecondLevelYes") {
         localStorage.setItem("climbsToSecondLevelValue", 1);
       }
       else if(clickedID == "climbsToSecondLevelNo") {
         localStorage.setItem("climbsToSecondLevelValue", 0);
-      }
-      else if(clickedId == "climbsToSecondLevelDidn'tTry") {
-        localStorage.setItem("climbsToSecondLevelValue", 2);
       }
       else if(clickedID == "climbsToThirdLevelYes") {
         localStorage.setItem("climbsToThirdLevelValue", 1);
@@ -56,26 +63,29 @@ This is the html page for Teleop during the match.
       else if(clickedID == "climbsToThirdLevelNo") {
         localStorage.setItem("climbsToThirdLevelValue", 0);
       }
-      else if(clickedID == "climbsToThirdLevelDidn'tTry") {
-        localStorage.setItem("climbsToThirdLevelValue", 2);
-      }
       else if(clickedID == "assistsAlliesClimbSecondLevelYes") {
         localStorage.setItem("assistsAlliesClimbSecondLevelValue", 1);
       }
       else if(clickedID == "assistsAlliesClimbSecondLevelNo") {
         localStorage.setItem("assistsAlliesClimbSecondLevelValue", 0);
       }
-      else if(clickedID == "assistsAlliesClimbSecondLevelDidn'tTry") {
-        localStorage.setItem("assistsAlliesClimbSecondLevelValue", 2);
-      }
       else if(clickedID == "assistsAlliesClimbThirdLevelYes") {
         localStorage.setItem("assistsAlliesClimbThirdLevelValue", 1);
       }
       else if(clickedID == "assistsAlliesClimbThirdLevelNo") {
-        localStorage.setItem("assistsAlliesClimbSecondLevelValue", 0);
+        localStorage.setItem("assistsAlliesClimbThirdLevelValue", 0);
       }
-      else if(clickedID == "assistsAlliesClimbThirdLevelDidn'tTry") {
-        localStorage.setItem("assistsAlliesClimbThirdLevelValue", 2);
+      else if(clickedID == "pickUpHatchesFromGroundYes") {
+        localStorage.setItem("pickUpHatchesFromGroundValue", 1);
+      }
+      else if(clickedID == "pickUpHatchesFromGroundNo") {
+        localStorage.setItem("pickUpHatchesFromGroundValue", 0);
+      }
+      else if(clickedID == "pickUpCargoFromGroundYes") {
+        localStorage.setItem("pickUpCargoFromGroundValue", 1);
+      }
+      else if(clickedID == "pickUpCargoFromGroundNo") {
+        localStorage.setItem("pickUpCargoFromGroundValue", 0);
       }
     }
 
@@ -157,8 +167,8 @@ This is the html page for Teleop during the match.
     </ul>
     <ul id="postMatchList">
       <li class="postMatchListElement">Did the robot reach the first level?
-        <INPUT TYPE="radio" id="climbsToSecondLevelYes" name="climbsToSecondLevel" onclick="switchONClick(this.id);"><strong>Yes</strong>
-        <INPUT TYPE="radio" id="climbsToSecondLevelNo"  name="climbsToSecondLevel" onclick="switchOnClick(this.id);"><strong>No</strong>
+        <INPUT TYPE="radio" id="climbsToFirstLevelYes" name="climbsToFirstLevel" onclick="switchONClick(this.id);"><strong>Yes</strong>
+        <INPUT TYPE="radio" id="climbsToFirstLevelNo"  name="climbsToFirstLevel" onclick="switchOnClick(this.id);"><strong>No</strong>
 
       <li class="postMatchListElement">Did the robot climb to the second level?
         <INPUT TYPE="radio" id="climbsToSecondLevelYes" name="climbsToSecondLevel" onclick="switchONClick(this.id);"><strong>Yes</strong>
