@@ -8,19 +8,6 @@ This is the html page for the Autonomous period.
     <title>Auto</title>
     <link rel="stylesheet" type="text/css" href="./stylesAuto.css"/>
   </head>
-<<<<<<< HEAD
-  <body>
-    <script>
-    function initialization() {
-      localStorage.setItem("movesInAutoValue", -1);
-      localStorage.setItem("crossesAutoLineValue", -1);
-      localStorage.setItem("placesOnSwitchAutoValue", -1);
-      localStorage.setItem("placesOnSwitchAmountValue", "");
-      localStorage.setItem("placesOnScaleAutoValue", -1);
-      localStorage.setItem("placesOnScaleAmountValue", "");
-      localStorage.setItem("placesInExchangeAutoValue", -1);
-      localStorage.setItem("placesInExchangeAmountValue", "");
-=======
 <!--hello-->
   <body>
     <script>
@@ -34,7 +21,6 @@ This is the html page for the Autonomous period.
       localStorage.setItem("placesCargoInRocketAutoValue", "");
       localStorage.setItem("drivesAutoAutoValue", -1);
       localStorage.setitem("drivesCameraAutoValue" -1);
->>>>>>> 0e82b657c5f7d9ceade802c42fe9ac2ca1c39678
     }
     function signOut() {
       localStorage.setItem("currentScoutName", "");
@@ -96,25 +82,11 @@ This is the html page for the Autonomous period.
       if(clickedID=="startson1st") {
         localStorage.setItem("startson1stValue", 1);
       }
-      else if(clickedID == "startsOn2nd") {
-        localStorage.setItem("startsOnn2ndValue", 0);
-      }
       else if(clickedID == "crossesHabLineYes"){
         localStorage.setItem("crossesHabLineValue", 1)
       }
-<<<<<<< HEAD
-      else if (clickedID == "placesInCargoAutoNo"){
-        localStorage.setItem("placesInCargoAutoValue", 0)
-      }
-      else if (clickedID == "placesInCargoAutoYes"){
-        localStorage.setItem("placesInCargoAutoValue", 1)
-      }
-      else if(clickedID == "movesInAutoNo") {
-        localStorage.setItem("movesInAutoValue", 0);
-=======
       else if(clickedID == "crossesHabLineNo") {
         localStorage.setItem("crossesHabLineValue", 0);
->>>>>>> 0e82b657c5f7d9ceade802c42fe9ac2ca1c39678
       }
       else if(clickedID == "placesHatchOnCargoShipAutoYes") {
         localStorage.setItem("placesHatchOnCargoShipValue", 1);
@@ -198,18 +170,10 @@ This is the html page for the Autonomous period.
         How Many?
         <input type="text" id="placesInExchangeAutoField" onchange="updateTextOnType(this.id);">
 
-<<<<<<< HEAD
-        <li class="autoListElement">Did the robot place a cargo in the cargo ship?
-          <INPUT TYPE="radio" id="placesInCargoAutoYes" name="placesInCargoAuto" onclick="switchOnClick(this.id);"><strong>Yes</strong>
-          <INPUT TYPE="radio" id="placesInCargoAutoNo" name="placesInCargoAuto" onclick="switchOnClick(this.id);"><strong>No</strong>
-          How Many?
-          <input type="text" id="placesInCargoAutoField" onchange="updateTextOnType(this.id);">
-=======
       <li class="autoListElement">Does driver navigate robot via camera or auto?
         <INPUT TYPE="radio" id="drivesCameraAuto" name="drivesInAuto" onclick="switchOnClick(this.id);"><strong>Camera</strong>
         <INPUT TYPE="radio" id="drivesAutoAuto" name="drivesInAuto" onclick="switchOnClick(this.id);"><strong>Auto</strong>
         </li>
->>>>>>> 0e82b657c5f7d9ceade802c42fe9ac2ca1c39678
       </ul>
     </ul>
 
