@@ -9,11 +9,15 @@ This is the html page for the Autonomous period.
     <link rel="stylesheet" type="text/css" href="./stylesAuto.css"/>
   </head>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> parent of 23f8458... Update auto.html
   <body>
     <script>
     function initialization() {
       localStorage.setItem("movesInAutoValue", -1);
-      localStorage.setItem("crossesAutoLineValue", -1);
+      localStorage.setItem("crosses(the)AutoLineValue", -1);
       localStorage.setItem("placesOnSwitchAutoValue", -1);
       localStorage.setItem("placesOnSwitchAmountValue", "");
       localStorage.setItem("placesOnScaleAutoValue", -1);
@@ -100,12 +104,15 @@ This is the html page for the Autonomous period.
         localStorage.setItem("crossesHabLineValue", 1)
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
       else if (clickedID == "placesInCargoAutoNo"){
         localStorage.setItem("placesInCargoAutoValue", 0)
       }
       else if (clickedID == "placesInCargoAutoYes"){
         localStorage.setItem("placesInCargoAutoValue", 1)
       }
+=======
+>>>>>>> parent of 23f8458... Update auto.html
       else if(clickedID == "movesInAutoNo") {
         localStorage.setItem("movesInAutoValue", 0);
 =======
@@ -141,9 +148,6 @@ This is the html page for the Autonomous period.
     function updateTextOnType(typedID) {
       if(typedID == "placesOnSwitchAutoField") {
         localStorage.setItem("placesOnSwitchAmountValue", document.getElementById("placesOnSwitchAutoField").value);
-      }
-      else if (typedID == "placesInCargoAutoField"){
-        localStorage.setItem("placesInCargoAutoValue", document.getElementById("placesInCargoAutoField").value);
       }
       else if(typedID == "placesOnScaleAutoField") {
         localStorage.setItem("placesOnScaleAmountValue", document.getElementById("placesOnScaleAutoField").value);
@@ -194,6 +198,7 @@ This is the html page for the Autonomous period.
         <INPUT TYPE="radio" id="placeCargoInRocketAutoNo"  name="placeCargoInRocketAuto" onclick="switchOnClick(this.id);"><strong>No</strong>
         How Many?
         <input type="text" id="placesInExchangeAutoField" onchange="updateTextOnType(this.id);">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
         <li class="autoListElement">Did the robot place a cargo in the cargo ship?
@@ -208,6 +213,8 @@ This is the html page for the Autonomous period.
         </li>
 >>>>>>> 0e82b657c5f7d9ceade802c42fe9ac2ca1c39678
       </ul>
+=======
+>>>>>>> parent of 23f8458... Update auto.html
     </ul>
 
       <button type="button" id="nextButton" onclick="next();">Next</button>
