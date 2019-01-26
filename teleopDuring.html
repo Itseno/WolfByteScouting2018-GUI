@@ -58,6 +58,12 @@ This is the html page for Teleop during the match.
             localStorage.setItem("cargoCargoshipTeleopValue", parseInt(localStorage.getItem("cargoCargoshipTeleopValue")) - 1);
             document.getElementById("cargoCargoshipTeleopCounter").innerHTML = localStorage.getItem("cargoCargoshipTeleopValue");
           }
+        else if(clickedID == "moveInTeleopYes") {
+          localStorage.setItem("moveInTeleopValue", 1);
+        }
+        else if(clickedID == "moveInTeleopNo") {
+          localStorage.setItem("moveInTeleopValue", 0);
+        }
         }
         else if(clickedID == "cargoCargoshipTeleopPlus") {
           localStorage.setItem("cargoCargoshipTeleopValue", parseInt(localStorage.getItem("cargoCargoshipTeleopValue")) + 1);
