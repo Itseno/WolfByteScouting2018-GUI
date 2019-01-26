@@ -12,13 +12,15 @@ This is the html page for the Autonomous period.
   <body>
     <script>
     function initialization() {
-      localStorage.setItem("startson1stValue", -1);
+      localStorage.setItem("startsOn1stValue", -1);
+      localStorage.setItem("startsOn2ndValue", -1);
       localStorage.setItem("crossesHabLineValue", -1);
-      localStorage.setItem("placesHatchOnCargoShipAutoValue", -1);
+      localStorage.setItem("placesHatchOnCargoShipAutoValue", "");
       localStorage.setItem("placesCargoInCargoShipAutoValue", "");
-      localStorage.setItem("placesHatchOnRocketAutoValue", -1);
+      localStorage.setItem("placesHatchOnRocketAutoValue", "");
       localStorage.setItem("placesCargoInRocketAutoValue", "");
-      localStorage.setItem("drivesCameraAutoValue", "");
+      localStorage.setItem("drivesAutoAutoValue", -1);
+      localStorage.setitem("drivesCameraAutoValue" -1);
     }
     function signOut() {
       localStorage.setItem("currentScoutName", "");
