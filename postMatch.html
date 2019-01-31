@@ -96,7 +96,7 @@ This is the html page for Teleop during the match.
     }
 
     function submit() {
-      if(localStorage.getItem("feedsFromPortalValue") == -1 || localStorage.getItem("feedsFromGroundValue") == -1 || localStorage.getItem("feedsFromExchangeValue") == -1 || localStorage.getItem("commentsValue").length < 10) {
+      if(localStorage.getItem("climbsToFirstLevel") == -1) {
         document.getElementById("title").innerHTML = "Please ensure all questions are answered and the comments field contains at least ten characters.";
         document.getElementById("title").style.color = "#FFD700";
         return;
@@ -167,7 +167,7 @@ This is the html page for Teleop during the match.
     </ul>
     <ul id="postMatchList">
       <li class="postMatchListElement">Did the robot reach the first level?
-        <INPUT TYPE="radio" id="climbsToFirstLevelYes" name="climbsToFirstLevel" onclick="switchONClick(this.id);"><strong>Yes</strong>
+        <INPUT TYPE="radio" id="climbsToFirstLevelYes" name="climbsToFirstLevel" onclick="switchOnClick(this.id);"><strong>Yes</strong>
         <INPUT TYPE="radio" id="climbsToFirstLevelNo"  name="climbsToFirstLevel" onclick="switchOnClick(this.id);"><strong>No</strong>
 
       <li class="postMatchListElement">Did the robot climb to the second level?

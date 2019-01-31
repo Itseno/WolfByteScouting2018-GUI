@@ -43,7 +43,7 @@ This is the html page for Teleop during the match.
       }
 
       function switchOnClick(clickedID) {
-        else if(clickedID == "cargoRocketTeleopMinus") {
+        if(clickedID == "cargoRocketTeleopMinus") {
           if(localStorage.getItem("cargoRocketTeleopValue") > 0) {
             localStorage.setItem("cargoRocketTeleopValue", parseInt(localStorage.getItem("cargoRocketTeleopValue")) - 1);
             document.getElementById("cargoRocketTeleopCounter").innerHTML = localStorage.getItem("cargoRocketTeleopValue");
@@ -87,7 +87,7 @@ This is the html page for Teleop during the match.
         }
         else if(clickedID == "hatchRocketTeleopMinus") {
           if(localStorage.getItem("hatchRocketTeleopValue") > 0) {
-            localStorage.setItem("hatchRocketTeleopValueocketValue", parseInt(localStorage.getItem("hatchRocketTeleopValue")) - 1);
+            localStorage.setItem("hatchRocketTeleopValue", parseInt(localStorage.getItem("hatchRocketTeleopValue")) - 1);
             document.getElementById("hatchRocketTeleopCounter").innerHTML = localStorage.getItem("hatchRocketTeleopValue");
           }
         }
@@ -95,6 +95,7 @@ This is the html page for Teleop during the match.
           localStorage.setItem("hatchRocketTeleopValue", parseInt(localStorage.getItem("hatchRocketTeleopValue")) + 1);
           document.getElementById("hatchRocketTeleopCounter").innerHTML = localStorage.getItem("hatchRocketTeleopValue");
         }
+      }
 // This function next() will probably need to be taken out.
       function next() {
         if(localStorage.getItem("movesInTeleopValue") == -1 || localStorage.getItem("getsOnPlatformValue") == -1 || localStorage.getItem("climbedBarValue") == -1 || localStorage.getItem("climbedOtherRobotValue") == -1 || localStorage.getItem("supportedOtherRobotWhileClimbedValue") == -1 || localStorage.getItem("supportedOtherRobotNotClimbedValue") == -1) {
@@ -123,7 +124,7 @@ This is the html page for Teleop during the match.
       <li class="teleopListElement">How much cargo did the robot place in the cargo ship during Teleop?
         <!--this needs to be fixed-->
         <button type="button" id="cargoCargoshipTeleopMinus" onclick="switchOnClick(this.id);">-</button>
-        <p style="display: inline;" id="CargocargoshipTeleopCounter">0</p>
+        <p style="display: inline;" id="cargoCargoshipTeleopCounter">0</p>
         <button type="button" id="cargoCargoshipTeleopPlus" onclick="switchOnClick(this.id);">+</button>
       </li>
       <li class="teleopListElement">How many hatches did the robot place on the rocket during Teleop?
@@ -136,7 +137,7 @@ This is the html page for Teleop during the match.
       <li class="teleopListElement">How much cargo did the robot place in the rocket during Teleop?
         <!--this needs to be fixed-->
         <button type="button" id="cargoRocketTeleopMinus" onclick="switchOnClick(this.id);">-</button>
-        <p style="display: inline;" id="cargoRocketTeleop">0</p>
+        <p style="display: inline;" id="cargoRocketTeleopCounter">0</p>
         <button type="button" id="cargoRocketTeleopPlus" onclick="switchOnClick(this.id);">+</button>
       </li>
 
