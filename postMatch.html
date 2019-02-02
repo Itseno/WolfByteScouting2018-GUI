@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+DOCTYPE html>
 <!--
 This is the html page for Teleop during the match.
 -->
@@ -17,7 +17,7 @@ This is the html page for Teleop during the match.
       localStorage.setItem("assistsAlliesClimbSecondLevelValue", -1);
       localStorage.setItem("assistsAlliesClimbThirdLevelValue", -1);
       localStorage.setItem("pickUpHatchesFromGroundValue", -1);
-      localStorage.setItem("pickUpCargoFromGround", -1);
+      localStorage.setItem("pickUpCargoFromGroundValue", -1);
       localStorage.setItem("commentsValue", "");
     }
     function signOut() {
@@ -111,15 +111,6 @@ This is the html page for Teleop during the match.
       jsonReq["username"] = localStorage.getItem("currentScoutName");
       jsonReq["robotNumber"] = localStorage.getItem("robotNumber");
       jsonReq["movesInAutoValue"] = localStorage.getItem("movesInAutoValue");
-      jsonReq["placesHatchOnCargoShipAutoValue"] = localStorage.getItem("placesHatchOnCargoShipAutoValue");
-      jsonReq["placesCargoInCargoShipAutoValue"] = localStorage.getItem("placesCargoInCargoShipAutoValue");
-      jsonReq["placesHatchOnRocketAutoValue"] = localStorage.getItem("placesHatchOnRocketAutoValue");
-      jsonReq["placesCargoInRocketAutoValue"] = localStorage.getItem("placesCargoInRocketAutoValue");
-      jsonReq["hatchCargoshipTeleopValue"] = localStorage.getItem("hatchCargoshipTeleopValue");
-      jsonReq["cargoCargoshipTeleopValue"] = localStorage.getItem("cargoCargoshipTeleopValue");
-      jsonReq["hatchRocketTeleopValue"] = localStorage.getItem("hatchRocketTeleopValue");
-      jsonReq["cargoRocketTeleopValue"] = localStorage.getItem("cargoRocketTeleopValue");
-      jsonReq["commentsValue"] = localStorage.getItem("commentsValue");
       jsonReq["crossesAutoLineValue"] = localStorage.getItem("crossesAutoLineValue");
       jsonReq["placesOnSwitchAutoValue"] = localStorage.getItem("placesOnSwitchAutoValue");
       jsonReq["startsOn1stValue"] = localStorage.getItem("startsOn1stValue");
