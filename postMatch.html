@@ -136,39 +136,6 @@ This is the html page for Teleop during the match.
       jsonReq["assistsAlliesClimbThirdLevelValue"] = localStorage.getItem("assistsAlliesClimbThirdLevelValue");
       jsonReq["pickUpHatchesFromGroundValue"] = localStorage.getItem("pickUpHatchesFromGroundValue");
       jsonReq["pickUpCargoFromGroundValue"] = localStorage.getItem("pickUpCargoFromGroundValue");
-      if(localStorage.getItem("placesOnSwitchAutoValue") == 0) {
-        jsonReq["placesOnSwitchAmountValue"] = 0;
-      }
-      else {
-        jsonReq["placesOnSwitchAmountValue"] = parseInt(localStorage.getItem("placesOnSwitchAmountValue"));
-      }
-      jsonReq["placesOnScaleAutoValue"] = localStorage.getItem("placesOnScaleAutoValue");
-      if(localStorage.getItem("placesOnScaleAutoValue") == 0) {
-        jsonReq["placesOnScaleAmountValue"] = 0;
-      }
-      else {
-        jsonReq["placesOnScaleAmountValue"] = parseInt(localStorage.getItem("placesOnScaleAmountValue"));
-      }
-      jsonReq["placesInExchangeAutoValue"] = localStorage.getItem("placesInExchangeAutoValue");
-      if(localStorage.getItem("placesInExchangeAutoValue") == 0) {
-        jsonReq["placesInExchangeAmountValue"] = 0;
-      }
-      else {
-        jsonReq["placesInExchangeAmountValue"] = parseInt(localStorage.getItem("placesInExchangeAmountValue"));
-      }
-      jsonReq["movesInTeleopValue"] = localStorage.getItem("movesInTeleopValue");
-      jsonReq["placesOnSwitchTeleopValue"] = localStorage.getItem("placesOnSwitchTeleopValue");
-      jsonReq["placesOnScaleTeleopValue"] = localStorage.getItem("placesOnScaleTeleopValue");
-      jsonReq["placesInExchangeTeleopValue"] = localStorage.getItem("placesInExchangeTeleopValue");
-      jsonReq["getsOnPlatformValue"] = localStorage.getItem("getsOnPlatformValue");
-      jsonReq["climbedBarValue"] = localStorage.getItem("climbedBarValue");
-      jsonReq["climbedOtherRobotValue"] = localStorage.getItem("climbedOtherRobotValue");
-      jsonReq["supportedOtherRobotWhileClimbedValue"] = localStorage.getItem("supportedOtherRobotWhileClimbedValue");
-      jsonReq["supportedOtherRobotNotClimbedValue"] = localStorage.getItem("supportedOtherRobotNotClimbedValue");
-      jsonReq["feedsFromPortalValue"] = localStorage.getItem("feedsFromPortalValue");
-      jsonReq["feedsFromGroundValue"] = localStorage.getItem("feedsFromGroundValue");
-      jsonReq["feedsFromExchangeValue"] = localStorage.getItem("feedsFromExchangeValue");
-      jsonReq["commentsValue"] = localStorage.getItem("commentsValue");
       xhr.send(JSON.stringify(jsonReq));
       xhr.onreadystatechange = proccessRequest;
       function proccessRequest(e) {
