@@ -118,8 +118,9 @@ This is the html page for Teleop during the match.
         <INPUT TYPE="radio" id="moveInTeleopYes" name="moveInTeleop" onclick="switchOnClick(this.id);"><strong>Yes</strong>
         <INPUT TYPE="radio" id="moveInTeleopNo" name="moveInTeleop" onclick="switchOnClick(this.id);"><strong>No</strong>
       <li class="teleopListElement">How many hatches did the robot place on the cargo ship?
-        <!--this needs to be fixed-->
-        <input type="text" id="placesHatchOnCargoShipTeleopField" onchange="updateTextOnType(this.id);">
+        <button type="button" id="hatchCargoshipTeleopMinus" onclick="switchOnClick(this.id);">-</button>
+        <p style="display: inline;" id="hatchCargoshipTeleopCounter">0</p>
+        <button type="button" id="hatchCargoshipTeleopPlus" onclick="switchOnClick(this.id);">+</button>
       </li>
       <li class="teleopListElement">How much cargo did the robot place in the cargo ship during Teleop?
         <!--this needs to be fixed-->
