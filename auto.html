@@ -12,8 +12,8 @@ This is the html page for the Autonomous period.
   <body>
     <script>
     function initialization() {
-      localStorage.setItem("startOn1stValue", -1);
-      localStorage.setItem("startOn2ndValue", -1);
+      localStorage.setItem("startsOn1stValue", -1);
+      localStorage.setItem("startsOn2ndValue", -1);
       localStorage.setItem("crossesHabLineValue", -1);
       localStorage.setItem("placesHatchOnCargoShipAutoValue", -1);
       localStorage.setItem("placesCargoInCargoShipAutoValue", -1);
@@ -82,13 +82,13 @@ This is the html page for the Autonomous period.
       else if(clickedID == "placesHatchOnCargoShipAutoNo") {
         localStorage.setItem("placesHatchOnCargoShipAutoValue", 0);
       }
-      else if(clickedID == "startOn1st") {
-        localStorage.setItem("startOn1stValue", 1);
-        localStorage.setItem("startOn2ndValue", 0);
+      else if(clickedID == "startsOn1st") {
+        localStorage.setItem("startsOn1stValue", 1);
+        localStorage.setItem("startsOn2ndValue", 0);
       }
-      else if(clickedID == "startOn2nd") {
-        localStorage.setItem("startOn1stValue", 0);
-        localStorage.setItem("startOn2ndValue", 1);
+      else if(clickedID == "startsOn2nd") {
+        localStorage.setItem("startsOn1stValue", 0);
+        localStorage.setItem("startsOn2ndValue", 1);
       }
       else if(clickedID == "placesCargoInCargoShipAutoYes") {
         localStorage.setItem("placesCargoInCargoShipAutoValue", 1);
@@ -144,8 +144,8 @@ This is the html page for the Autonomous period.
         <INPUT TYPE="radio" id="crossesHabLineNo" name="crossesHabLine" onclick="switchOnClick(this.id);"><strong>No</strong></li>
 
       <li class="autoListElement">Did the robot start on 1st or 2nd level?
-        <INPUT TYPE="radio" id="startOn1st" name="startOn" onclick="switchOnClick(this.id);"><strong>1st</strong>
-        <INPUT TYPE="radio" id="startOn2nd" name="startOn" onclick="switchOnClick(this.id);"><strong>2nd</strong>
+        <INPUT TYPE="radio" id="startsOn1st" name="startOn" onclick="switchOnClick(this.id);"><strong>1st</strong>
+        <INPUT TYPE="radio" id="startsOn2nd" name="startOn" onclick="switchOnClick(this.id);"><strong>2nd</strong>
       </li>
 
       <li class="autoListElement">Did the robot place hatch on cargo ship?
