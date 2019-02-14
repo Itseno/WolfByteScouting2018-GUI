@@ -9,6 +9,7 @@
   color: #FFFFFF;
   width: 100%
 }
+.big{ width: 2em; height: 2em; }
 #navbar li {
   display: inline-block;
   width: 32%;

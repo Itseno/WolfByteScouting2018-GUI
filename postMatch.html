@@ -14,11 +14,17 @@ This is the html page for Teleop during the match.
       localStorage.setItem("climbsToFirstLevelValue", -1);
       localStorage.setItem("climbsToSecondLevelValue", -1);
       localStorage.setItem("climbsToThirdLevelValue", -1);
+      localStorage.setItem("noClimbValue", -1);
       localStorage.setItem("assistsAlliesClimbSecondLevelValue", -1);
       localStorage.setItem("assistsAlliesClimbThirdLevelValue", -1);
       localStorage.setItem("pickUpHatchesFromGroundValue", -1);
       localStorage.setItem("pickUpCargoFromGroundValue", -1);
       localStorage.setItem("commentsValue", "");
+      localStorage.setItem("defenseValue", -1);
+      localStorage.setItem("attemptValue", -1);
+      localStorage.setItem("DriverSkillValue", 0);
+      localStorage.setItem("RobotEffValue", 0);
+      localStorage.setItem("RobotSpeedValue", 0);
     }
     function signOut() {
       localStorage.setItem("currentScoutName", "");
@@ -45,32 +51,41 @@ This is the html page for Teleop during the match.
     }
 
     function switchOnClick(clickedID) {
-      if(clickedID == "climbsToFirstLevelYes") {
+      if(clickedID == "climbsToFirstLevel") {
         localStorage.setItem("climbsToFirstLevelValue", 1);
-      }
-      else if(clickedID == "climbsToFirstLevelNo") {
-        localStorage.setItem("climbsToFirstLevelValue", 0);
-      }
-      else if(clickedID == "climbsToSecondLevelYes") {
-        localStorage.setItem("climbsToSecondLevelValue", 1);
-      }
-      else if(clickedID == "climbsToSecondLevelNo") {
         localStorage.setItem("climbsToSecondLevelValue", 0);
-      }
-      else if(clickedID == "climbsToThirdLevelYes") {
-        localStorage.setItem("climbsToThirdLevelValue", 1);
-      }
-      else if(clickedID == "climbsToThirdLevelNo") {
         localStorage.setItem("climbsToThirdLevelValue", 0);
+        localStorage.setItem("noClimbValue", 0);
       }
-      else if(clickedID == "assistsAlliesClimbSecondLevelYes") {
-        localStorage.setItem("assistsAlliesClimbSecondLevelValue", 1);
+      else if(clickedID == "climbsToSecondLevel") {
+        localStorage.setItem("climbsToFirstLevelValue", 0);
+        localStorage.setItem("climbsToSecondLevelValue", 1);
+        localStorage.setItem("climbsToThirdLevelValue", 0);
+        localStorage.setItem("noClimbValue", 0);
       }
-      else if(clickedID == "assistsAlliesClimbSecondLevelNo") {
-        localStorage.setItem("assistsAlliesClimbSecondLevelValue", 0);
+      else if(clickedID == "climbsToThirdLevel") {
+        localStorage.setItem("climbsToFirstLevelValue", 0);
+        localStorage.setItem("climbsToSecondLevelValue", 0);
+        localStorage.setItem("climbsToThirdLevelValue", 1);
+        localStorage.setItem("noClimbValue", 0);
       }
-      else if(clickedID == "assistsAlliesClimbThirdLevelYes") {
-        localStorage.setItem("assistsAlliesClimbThirdLevelValue", 1);
+      else if(clickedID == "noClimb") {
+        localStorage.setItem("climbsToFirstLevelValue", 0);
+        localStorage.setItem("climbsToSecondLevelValue", 0);
+        localStorage.setItem("climbsToThirdLevelValue", 0);
+        localStorage.setItem("noClimbValue", 1);
+      }
+      else if(clickedID == "defenseYes"){
+        localStorage.setItem("defenseValue", 1);
+      }
+      else if(clickedID == "defenseNo"){
+        localStorage.setItem("defenseValue", 0);
+      }
+      else if(clickedID == "attemptNo"){
+        localStorage.setItem("attemptValue", 0);
+      }
+      else if(clickedID == "attemptYes"){
+        localStorage.setItem("attemptValue", 1);
       }
       else if(clickedID == "assistsAlliesClimbThirdLevelNo") {
         localStorage.setItem("assistsAlliesClimbThirdLevelValue", 0);
@@ -86,6 +101,36 @@ This is the html page for Teleop during the match.
       }
       else if(clickedID == "pickUpCargoFromGroundNo") {
         localStorage.setItem("pickUpCargoFromGroundValue", 0);
+      }
+      else if(clickedID == "DriverSkillMinus") {
+        if(localStorage.getItem("DriverSkillValue") > 0) {
+          localStorage.setItem("DriverSkillValue", parseInt(localStorage.getItem("DriverSkillValue")) - 1);
+          document.getElementById("DriverSkillCounter").innerHTML = localStorage.getItem("DriverSkillValue");
+        }
+      }
+      else if(clickedID == "DriverSkillPlus") {
+        localStorage.setItem("DriverSkillValue", parseInt(localStorage.getItem("DriverSkillValue")) + 1);
+        document.getElementById("DriverSkillCounter").innerHTML = localStorage.getItem("DriverSkillValue");
+      }
+      else if(clickedID == "RobotEffMinus") {
+        if(localStorage.getItem("RobotEffValue") > 0) {
+          localStorage.setItem("RobotEffValue", parseInt(localStorage.getItem("RobotEffValue")) - 1);
+          document.getElementById("RobotEffCounter").innerHTML = localStorage.getItem("RobotEffValue");
+        }
+      }
+      else if(clickedID == "RobotEffPlus") {
+        localStorage.setItem("RobotEffValue", parseInt(localStorage.getItem("RobotEffValue")) + 1);
+        document.getElementById("RobotEffCounter").innerHTML = localStorage.getItem("RobotEffValue");
+      }
+      else if(clickedID == "RobotSpeedMinus") {
+        if(localStorage.getItem("RobotSpeedValue") > 0) {
+          localStorage.setItem("RobotSpeedValue", parseInt(localStorage.getItem("RobotSpeedValue")) - 1);
+          document.getElementById("RobotSpeedCounter").innerHTML = localStorage.getItem("RobotSpeedValue");
+        }
+      }
+      else if(clickedID == "RobotSpeedPlus") {
+        localStorage.setItem("RobotSpeedValue", parseInt(localStorage.getItem("RobotSpeedValue")) + 1);
+        document.getElementById("RobotSpeedCounter").innerHTML = localStorage.getItem("RobotSpeedValue");
       }
     }
 
@@ -155,33 +200,47 @@ This is the html page for Teleop during the match.
       <li id="signOut" onclick="signOut();">Sign Out</li>
     </ul>
     <ul id="postMatchList">
-      <li class="postMatchListElement">Did the robot reach the first level?
-        <INPUT TYPE="radio" id="climbsToFirstLevelYes" name="climbsToFirstLevel" onclick="switchOnClick(this.id);"><strong>Yes</strong>
-        <INPUT TYPE="radio" id="climbsToFirstLevelNo"  name="climbsToFirstLevel" onclick="switchOnClick(this.id);"><strong>No</strong>
-
-      <li class="postMatchListElement">Did the robot climb to the second level?
-        <INPUT TYPE="radio" id="climbsToSecondLevelYes" name="climbsToSecondLevel" onclick="switchOnClick(this.id);"><strong>Yes</strong>
-        <INPUT TYPE="radio" id="climbsToSecondLevelNo"  name="climbsToSecondLevel" onclick="switchOnClick(this.id);"><strong>No</strong>
-
-      <li class="postMatchListElement">Did the robot climb to the third level?
-        <INPUT TYPE="radio" id="climbsToThirdLevelYes" name="climbsToThirdLevel" onclick="switchOnClick(this.id);"><strong>Yes</strong>
-        <INPUT TYPE="radio" id="climbsToThirdLevelNo" name="climbsToThirdLevel" onclick="switchOnClick(this.id);"><strong>No</strong>
-
-      <li class="postMatchListElement">Did the robot assist allies to climb to the second level?
-        <INPUT TYPE="radio" id="assistsAlliesClimbSecondLevelYes" name="assistsAlliesClimbSecondLevel" onclick="switchOnClick(this.id);"><strong>Yes</strong>
-        <INPUT TYPE="radio" id="assistsAlliesClimbSecondLevelNo" name="assistsAlliesClimbSecondLevel" onclick="switchOnClick(this.id);"><strong>No</strong>
-
-      <li class="postMatchListElement">Did the robot assist allies to climb to the third level?
-        <INPUT TYPE="radio" id="assistsAlliesClimbThirdLevelYes" name="assistsAlliesClimbThirdLevel" onclick="switchOnClick(this.id);"><strong>Yes</strong>
-        <INPUT TYPE="radio" id="assistsAlliesClimbThirdLevelNo" name="assistsAlliesClimbThirdLevel" onclick="switchOnClick(this.id);"><strong>No</strong>
+      <li class="postMatchListElement">Did the robot play any defense?
+        <INPUT TYPE="radio" class="big" id="defenseYes" name="defense" onclick="switchOnClick(this.id);"><strong>Yes</strong>
+        <INPUT TYPE="radio" class="big" id="defenseNo" name="defense" onclick="switchOnClick(this.id);"><strong>No</strong></li>
+      </li>
+      <li class="postMatchListElement">Did the Robot attempt to climb but failed?
+        <INPUT TYPE="radio" class="big" id="attemptYes" name="climbAttempt" onclick="switchOnClick(this.id);"><strong>Yes</strong>
+        <INPUT TYPE="radio" class="big" id="attemptNo" name="climbAttempt" onclick="switchOnClick(this.id);"><strong>No</strong></li>
+      </li>
+      <li class="postMatchListElement">What level did the Robot reach in endgame?
+        <INPUT TYPE="radio" class="big" id="climbsToFirstLevel" name="climbsToFirstLevel" onclick="switchOnClick(this.id);"><strong>1st</strong>
+        <INPUT TYPE="radio" class="big" id="climbsToSecondLevel"  name="climbsToFirstLevel" onclick="switchOnClick(this.id);"><strong>2nd</strong>
+        <INPUT TYPE="radio" class="big" id="climbsToThirdLevel"  name="climbsToFirstLevel" onclick="switchOnClick(this.id);"><strong>3rd</strong>
+        <INPUT TYPE="radio" class="big" id="noClimb"  name="climbsToFirstLevel" onclick="switchOnClick(this.id);"><strong>None</strong>
+      </li>
 
       <li class="postMatchListElement">Can the robot pick up hatches from the ground?
-        <INPUT TYPE="radio" id="pickUpHatchesFromGroundYes" name="pickUpHatchesFromGround" onclick="switchOnClick(this.id);"><strong>Yes</strong>
-        <INPUT TYPE="radio" id="pickUpHatchesFromGroundNo" name="pickUpHatchesFromGround" onclick="switchOnClick(this.id);"><strong>No</strong>
+        <INPUT TYPE="radio" class="big" id="pickUpHatchesFromGroundYes" name="pickUpHatchesFromGround" onclick="switchOnClick(this.id);"><strong>Yes</strong>
+        <INPUT TYPE="radio" class="big" id="pickUpHatchesFromGroundNo" name="pickUpHatchesFromGround" onclick="switchOnClick(this.id);"><strong>No</strong>
+      </li>
       <li class="postMatchListElement">Can the robot pick up cargo from the ground?
-        <INPUT TYPE="radio" id="pickUpCargoFromGroundYes" name="pickUpCargoFromGround" onclick="switchOnClick(this.id);"><strong>Yes</strong>
-        <INPUT TYPE="radio" id="pickUpCargoFromGroundNo" name="pickUpCargoFromGround" onclick="switchOnClick(this.id);"><strong>No</strong>
-
+        <INPUT TYPE="radio" class="big" id="pickUpCargoFromGroundYes" name="pickUpCargoFromGround" onclick="switchOnClick(this.id);"><strong>Yes</strong>
+        <INPUT TYPE="radio" class="big" id="pickUpCargoFromGroundNo" name="pickUpCargoFromGround" onclick="switchOnClick(this.id);"><strong>No</strong>
+      </li>
+      <li class="postMatchListElement">Driver Skill from 1-5:
+        <!--this needs to be fixed-->
+        <button type="button" id="DriverSkillMinus" onclick="switchOnClick(this.id);">-</button>
+        <p style="display: inline;" id="DriverSkillCounter">0</p>
+        <button type="button" id="DriverSkillPlus" onclick="switchOnClick(this.id);">+</button>
+      </li>
+      <li class="postMatchListElement">Robot Efficiency from 1-5:
+        <!--this needs to be fixed-->
+        <button type="button" id="RobotEffMinus" onclick="switchOnClick(this.id);">-</button>
+        <p style="display: inline;" id="RobotEffCounter">0</p>
+        <button type="button" id="RobotEffPlus" onclick="switchOnClick(this.id);">+</button>
+      </li>
+      <li class="postMatchListElement">Robot Speed from 1-5:
+        <!--this needs to be fixed-->
+        <button type="button" id="RobotSpeedMinus" onclick="switchOnClick(this.id);">-</button>
+        <p style="display: inline;" id="RobotSpeedCounter">0</p>
+        <button type="button" id="RobotSpeedPlus" onclick="switchOnClick(this.id);">+</button>
+      </li>
     </ul>
     <p id="commentsHeader">Please write some comments about the robot. Comments must be ten characters.</p>
     <input type="text" name="comments" id="commentsField" onchange="updateTextOnType(this.id);">
